@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Tech notas</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.38" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	
+	<header> 
+	<h1 id="PAGE_NAME">Tech Notas!</h1>
+	<div>
+		<button class="ADD_NOTA_BTN" onclick="OPEN_NOTE_DIALOG()">+ Nota</button>
+		<button id="TEMA_BTN"class="tema">🌙</button>
+	
+	
+	</div>
+	
+	
+	
+	
+	</header>
+	<main id="NOTAS_CONTAINER" class= "NOTAS_GRID">
+	
+		
+		
+	</main>
+	<dialog id="NOTAS_DIALOG">
+		<div class="CONTENIDO_DIALOG">
+			
+			<div class="HEADER_DIALOG">
+			<h2 class="TITULO_DIALOG" id="TituloDialog">Nueva nota</h2>
+			<button class="CLOSE_BTN" onclick="CLOSE_NOTE_DIALOG()">x</button>
+			</div>
+			
+			<form id="NOTA_FORM">
+			<div class="GRUPO_FORM">
+				<label for="notaTitulo" class="form-label">Titulo</label>
+				<input type="text" id="notaTitulo"  class="form-input" placeholder="Escriba el titulo..." required></input>		
+			</div>
+			
+			<div class="GRUPO_FORM">
+			<label for="notaContenido" class="form-label">Contenido</label>
+			<textarea id="ContenidoNota" class="form-textarea" placeholder="Escribe tu nota..." required></textarea>
+			</div>
+			
+			<div class="dialog-actions">
+			
+			<button type="button" class="CancelarBTN" onclick="CLOSE_NOTE_DIALOG()">Cancelar</button>
+			<button type="submit" class="GuardarBTN">Guardar nota</button>
+	
+			</div>
+			
+			</form>
+		</div>
+	</dialog>
+	
+	
+	
+	
+	
+	
+</body>
+
+<script src="notas.js"></script>
+</html>
