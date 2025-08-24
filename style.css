@@ -37,6 +37,11 @@ h1 {
   margin-bottom: 1rem;
 }
 
+h1:active, h2:active, h3:active, h4:active {
+      transform: scale(0.95);
+
+}
+
 button, input, textarea {
   font: inherit;
 }
@@ -63,6 +68,33 @@ header {
   background: gray;
 }
 
+.ADD_PASTA_BTN {
+  background: var(--brand-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+
+}
+
+.ADD_NOTA_BTN:active {
+
+      transform: scale(0.95);
+
+}
+
+.ADD_PASTA_BTN:hover {
+    background: gray;
+}
+
+.ADD_PASTA_BTN:active {
+      transform: scale(0.95);
+
+}
+
 #TEMA_BTN {
   background: var(--surface-color);
   color: var(--text-color);
@@ -77,6 +109,11 @@ header {
 
 #TEMA_BTN:hover {
   background: black;
+}
+
+#TEMA_BTN:active {
+      transform: scale(0.95);
+
 }
 
 .NOTAS_GRID {
@@ -278,5 +315,35 @@ dialog::backdrop {
 .ESTADO_VACIO p {
   font-size: 1rem;
   margin-bottom: 2rem;
+}
+
+
+
+.TOGGLE_BTN {
+  background-color: var(--brand-color); /* cor do botão */
+  color: white;                         /* cor do texto */
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;               /* cantos arredondados */
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.TOGGLE_BTN:hover {
+  background-color: gray;           /* cor ao passar o mouse */
+  transform: scale(1.05);              /* leve efeito de zoom */
+}
+.TOGGLE_BTN {
+  font-size: 1.2rem;
+}
+
+.TOGGLE_BTN::after {
+  content: "📂";   /* emoji de pasta */
+  margin-left: 0.3rem;
+}
+
+.TOGGLE_BTN:active {
+  transform: scale(0.95);   /* efeito de “clicado” */
 }
 
