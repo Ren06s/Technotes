@@ -5,5 +5,5 @@ Todo se guarda en el almacenamiento local de tu navegador, por lo que...
 1- Nadie puede ver las notas que escribas, ni siquiera yo.
 2- Al ser almacenado en el navegador, no ocupa espacio en tu dispositivo.
 
-Dicho esto, sientese libre de usar a Technotes fines personales.
+Dicho esto, sientese libre de usar a Technotes para fines personales.
 
