@@ -68,7 +68,7 @@ header {
   background: gray;
 }
 
-.ADD_PASTA_BTN {
+.ADD_CARPETA_BTN {
   background: var(--brand-color);
   color: white;
   border: none;
@@ -86,11 +86,11 @@ header {
 
 }
 
-.ADD_PASTA_BTN:hover {
+.ADD_CARPETA_BTN:hover {
     background: gray;
 }
 
-.ADD_PASTA_BTN:active {
+.ADD_CARPETA_BTN:active {
       transform: scale(0.95);
 
 }
@@ -317,33 +317,49 @@ dialog::backdrop {
   margin-bottom: 2rem;
 }
 
+.DELETE_FOLDER_BTN {
+  background-color: var(--brand-color);                    
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;              
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+
+}
+
+.DELETE_FOLDER_BTN:hover {
+  background-color: gray;
+  transform: scale(1.05);
+}
+
+.DELETE_FOLDER_BTN:active {
+transform: scale(0.95);
+
+}
 
 
 .TOGGLE_BTN {
-  background-color: var(--brand-color); /* cor do botão */
-  color: white;                         /* cor do texto */
-  border: none;
+  background-color: var(--brand-color);                    
   padding: 0.4rem 0.8rem;
-  border-radius: 0.5rem;               /* cantos arredondados */
+  border-radius: 0.5rem;              
   cursor: pointer;
   font-weight: 600;
   transition: all 0.2s ease;
 }
 
 .TOGGLE_BTN:hover {
-  background-color: gray;           /* cor ao passar o mouse */
-  transform: scale(1.05);              /* leve efeito de zoom */
+  background-color: gray;           
+  transform: scale(1.05);             
 }
 .TOGGLE_BTN {
   font-size: 1.2rem;
 }
 
 .TOGGLE_BTN::after {
-  content: "📂";   /* emoji de pasta */
   margin-left: 0.3rem;
 }
 
 .TOGGLE_BTN:active {
-  transform: scale(0.95);   /* efeito de “clicado” */
+  transform: scale(0.95);
 }
 

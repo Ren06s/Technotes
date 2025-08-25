@@ -129,7 +129,7 @@ function RENDER_NOTAS() {
                 <h2>No hay notas.</h2>
                 <p>Que vacio...</p>
                 <button class="ADD_NOTA_BTN" onclick="OPEN_NOTE_DIALOG()">+ Nota</button>
-                <button class="ADD_PASTA_BTN" onclick="CREATE_FOLDER_PROMPT()">+ Carpeta</button>
+                <button class="ADD_CARPETA_BTN" onclick="CREATE_FOLDER_PROMPT()">+ Carpeta</button>
             </div>
         `;
         return;
@@ -145,7 +145,8 @@ function RENDER_NOTAS() {
         header.className = 'CARPETA_HEADER';
         header.innerHTML = `
             <h3>${carpeta.nombre}</h3>
-            <button class="TOGGLE_BTN"></button>
+            <button class="TOGGLE_BTN">📂</button>
+            <button class="DELETE_FOLDER_BTN">🗑️</button>
         `;
         carpetaDiv.appendChild(header);
 
@@ -176,6 +177,17 @@ function RENDER_NOTAS() {
         });
 
         container.appendChild(carpetaDiv);
+        header.querySelector('.DELETE_FOLDER_BTN').addEventListener('click', (event) => {
+    event.stopPropagation();
+    if (confirm(`¿Deseas eliminar la carpeta "${carpeta.nombre}"? Esto también eliminará sus notas.`)) {
+        notas = notas.filter(nota => nota.carpetaId !== carpeta.id);
+        carpetas = carpetas.filter(c => c.id !== carpeta.id);
+        SAVE_DATA();
+        RENDER_NOTAS();
+    }
+});
+
+
     });
 
    
