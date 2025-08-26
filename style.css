@@ -380,7 +380,7 @@ transform: scale(0.95);
 .CARPETA_HEADER[data-empty="true"]::after {
   content: "Carpeta vacía";
   position: absolute;
-  right: 48%;
+  left: 35%;
   top: 50%;
   transform: translateY(-50%);
   font-size: 0.9rem;
