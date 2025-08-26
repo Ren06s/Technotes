@@ -11,7 +11,6 @@
   --base-color: #d0dbd6;
   --surface-color: #86dbb5;
   --text-color: black;
-  --secondary-text-color: gray;
   --base-transparent-90: rgba(247, 247, 247, 0.9);
   --base-transparent-100: rgba(247, 247, 247, 1);
 }
@@ -361,5 +360,37 @@ transform: scale(0.95);
 
 .TOGGLE_BTN:active {
   transform: scale(0.95);
+}
+ 
+.VacioMensaje {
+  display: none;
+  color: gray;
+  text-align: center;
+  padding: 0.5;
+}
+
+.notasCarpeta:hover .VacioMensaje {
+  display: block;
+
+}
+.CARPETA_HEADER {
+  position: relative;
+}
+
+.CARPETA_HEADER[data-empty="true"]::after {
+  content: "Carpeta vacía";
+  position: absolute;
+  right: 48%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  color: gray;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+
+.CARPETA_HEADER[data-empty="true"]:hover::after {
+  opacity: 1;
 }
 

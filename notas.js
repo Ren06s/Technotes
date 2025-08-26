@@ -154,6 +154,15 @@ function RENDER_NOTAS() {
         notasDiv.className = 'CARPETA_NOTAS';
         notasDiv.style.display = 'none';
 
+        if (notasCarpeta.length === 0) {
+            header.setAttribute('data-empty', 'true');
+            const VACIO_MSG = document.createElement('p');
+            VACIO_MSG.className = 'VacioMensaje'
+            VACIO_MSG.textContent = "Carpeta vacia...";
+            notasDiv.appendChild(VACIO_MSG);
+
+        } else {
+            header.removeAttribute('data-empty');
         notasCarpeta.forEach(nota => {
             const notaCard = document.createElement('div');
             notaCard.className = 'notaCard';
@@ -167,7 +176,7 @@ function RENDER_NOTAS() {
             `;
             notaCard.onclick = () => VIEW_NOTE(nota.id);
             notasDiv.appendChild(notaCard);
-        });
+        })};
 
         carpetaDiv.appendChild(notasDiv);
 
