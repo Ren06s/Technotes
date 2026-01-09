@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulario.css">
+    <title>Formulario Login y Registro</title>
+</head>
+<body>
+
+<main class="container">
+    
+    <form id="formBoxLogin" class="formBox">    
+        <h1 class="tit">Login</h1>
+        
+        <div class="inputBox">
+            <img src="/formulario/img/usuario.png" class="icons" alt="Icono usuario">
+            <input type="text" placeholder="Usuario" required>
+        </div>
+
+        <div class="inputBox">
+            <img src="/formulario/img/candado.png" class="icons" alt="Icono contraseña">
+            <input type="password" placeholder="Contraseña" required>                
+        </div> 
+
+        <button type="button" class="btn">Login!</button>
+    </form>
+
+    <form id="formBoxReg" class="formBox">    
+        <h1 class="tit">Registro</h1>
+        
+        <div class="inputBox">
+            <img src="/formulario/img/usuario.png" class="icons" alt="Icono usuario">
+            <input type="text" placeholder="Usuario" required>
+        </div>
+
+        <div class="inputBox">
+            <img src="/formulario/img/candado.png" class="icons" alt="Icono contraseña">
+            <input type="password" placeholder="Contraseña" required>                
+        </div> 
+
+        <button type="button" class="btn">Registrarse!</button>
+    </form>
+
+    <aside class="toggleBox">
+        
+        <div class="togglePanel" id="togglePanelDer">
+            <h1>¡Hola mundo!</h1>
+            <p>¿No tienes una cuenta?</p>
+            <button class="btn" id="toggleBtnReg">¡Regístrate!</button>
+        </div>
+
+        <div class="togglePanel" id="togglePanelIzq">
+            <h1>¡Bienvenido!</h1>
+            <p>¿Ya tienes una cuenta?</p>
+            <button class="btn" id="toggleBtnLogin">Login!</button>
+        </div>
+        
+    </aside>
+
+</main>
+
+<script src="formulario.js"></script>
+
+</body>
+</html>
